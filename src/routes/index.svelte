@@ -34,7 +34,7 @@
 	<title>Home</title>
 </svelte:head>
 
-<div class="flex items-center justify-evenly mb-10">
+<div class="flex items-center justify-evenly mb-10 flex-wrap">
 	{#each cities as city}
 		<ButtonComponent {city} clicked={() => fetchWeatherHandler(city.lat, city.lon)} />
 	{/each}
