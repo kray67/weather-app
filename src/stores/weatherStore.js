@@ -30,7 +30,7 @@ const dateConverter = (unixDate) => {
     const date = new Date(unixDate * 1000)
     const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat']
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    const dateToPresent = { weekday: weekdays[date.getDay()], day: date.getDate(), month: months[date.getMonth()], year: date.getFullYear() }
+    const parsedDateObject = { weekday: weekdays[date.getDay()], day: date.getDate(), month: months[date.getMonth()], year: date.getFullYear() }
 
-    return dateToPresent
+    return parsedDateObject
 }

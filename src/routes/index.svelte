@@ -19,11 +19,12 @@
 			fetchWeather(lat, lon)
 			.then(() => {
 					console.log($weather)
+					// updating = false
 				})
 		}, 2000);
 		setTimeout(() => {
 			updating = false
-		}, 3500);
+		}, 3000);
 	};
 	fetchWeatherHandler(lat, lon)
 </script>
@@ -48,11 +49,11 @@
 		</div>
 	{:else}
 		<div class="flex flex-col">
-			<h2 in:fly={{ x: -5, duration: 500, delay: 500 }} out:fly={{ x: 5, duration: 500}} class="text-4xl uppercase self-center mb-5">{`${$weather.city}`}</h2>
+			<h2 in:fly={{ y: -50, duration: 500, delay: 750 }} out:fly={{ y: 0, duration: 500}} class="text-4xl uppercase self-center mb-5">{`${$weather.city}`}</h2>
 
-			<div class="flex items-center justify-evenly">
+			<div class="flex flex-col lg:flex-row items-center justify-evenly">
 				{#each $weather.daily as day, idx}
-					<div in:fly={{ x: -5, duration: 500, delay: 100 + (100 * idx) }} out:fly={{ x: 5, duration: 500, delay: 100 + (100 * idx) }}>
+					<div in:fly={{ x: -50, duration: 500, delay: 100 + (75 * idx) }} out:fly={{ x: 50, duration: 500, delay: 100 + (75 * idx) }}>
 						<DayComponent {day} />
 					</div>
 				{/each}
