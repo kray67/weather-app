@@ -48,7 +48,7 @@
 		</div>
 	{:else}
 		<div class="flex flex-col">
-			<h2 in:fly={{ x: -5, duration: 500, delay: 500 }} out:fly={{ x: 5, duration: 500}} class="text-4xl uppercase self-center mb-5">{`${$weather.city}, ${$weather.continent}`}</h2>
+			<h2 in:fly={{ x: -5, duration: 500, delay: 500 }} out:fly={{ x: 5, duration: 500}} class="text-4xl uppercase self-center mb-5">{`${$weather.city}`}</h2>
 
 			<div class="flex items-center justify-evenly">
 				{#each $weather.daily as day, idx}
