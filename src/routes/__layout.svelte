@@ -6,7 +6,7 @@
 
 <!-- * SLOTS -->
 <!-- <NavComponent /> -->
-<div class="h-full flex flex-col py-10 lg:px-10 lg:py-20 bg-amber-100 scrollable">
+<div class="h-full flex flex-col items-center justify-center py-10 lg:px-10">
     <slot></slot>
 </div>
 

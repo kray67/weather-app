@@ -1,17 +1,16 @@
 <script>
-	export let city
-	export let clicked
+    export let city
+    export let clicked
 </script>
 
-<button
-	class="btn from-left py-2 px-3 rounded-lg overflow-hidden font-bold text-xl"
-	on:click={() => clicked(city.lat, city.lon)}>{city.name}</button
->
+<div class="row from-left rounded-lg py-2 px-5">
+    <h1 on:click={() => clicked()}>{`${city.name}, ${city.sys.country}`}</h1>
+</div>
 
 <style>
-	.btn {
+	.row {
 		position: relative; 
-		color: #4DB0D3;
+		color: #0E2E3A;
 		text-transform: uppercase;
 		transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 		cursor: pointer;
@@ -19,8 +18,8 @@
         z-index: 1;
 	}
 
-	.btn:before,
-	.btn:after {
+	.row:before,
+	.row:after {
 		content: '';
 		position: absolute;
 		transition: inherit;
@@ -28,16 +27,16 @@
         box-sizing: border-box;
 	}
 
-	.btn:hover {
+	.row:hover {
 		color: #fff;
 		transition-delay: 0.15s;
 	}
 
-	.btn:hover:before {
+	.row:hover:before {
 		transition-delay: 0s;
 	}
 
-	.btn:hover:after {
+	.row:hover:after {
 		background: #0E2E3A;
 		transition-delay: 0.15s;
 	}

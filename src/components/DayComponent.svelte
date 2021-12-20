@@ -12,11 +12,11 @@
 		class={`flex flex-row-reverse lg:flex-col items-center justify-end gap-x-3 lg:justify-center relative w-4/5 lg:pt-32 lg:w-full lg:h-3/4 ${day.weather[0].main.toLowerCase()} shadow-xl rounded-3xl`}
 	>
 		<img
-			class="w-28 lg:w-60 max-w-none absolute -right-12 lg:-top-20 lg:right-auto drop-shadow-lg"
+			class="w-28 lg:w-60 max-w-none absolute -right-10 lg:-top-20 lg:right-auto drop-shadow-lg"
 			src={`./images/animated/${day.weather[0].main}.svg`}
 			alt="{day.weather[0].main}"
 		/>
-		<p class="font-bold text-5xl lg:text-7xl lg:mb-5">{`${Math.round(day.temp.max)}º`}</p>
+		<p class="font-bold text-4xl lg:text-7xl lg:mb-5">{`${Math.round(day.temp.max)}º`}</p>
 		<div class="flex lg:flex-col items-center justify-evenly pl-3 lg:w-full lg:pl-0">
 			<div class="flex w-1/2 items-center justify-around mr-5 lg:mb-1 lg:mr-0 lg:justify-center lg:w-full">
 				<img class="w-6 lg:w-auto mr-1 lg:mr-0" src="./images/precipitation.svg" alt="precipitation" />
