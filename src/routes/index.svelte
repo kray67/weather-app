@@ -60,6 +60,12 @@
 					<SearchResultsComponent {city} clicked={() => fetchWeatherHandler(city.coord.lat, city.coord.lon, city.name)} />
 				{/each}
 			</div>
+		{:else}
+			<div transition:fade class="flex flex-col gap-y-3 mx-auto">
+				<div class="row from-left rounded-lg py-2 px-5">
+					<h1>No results</h1>
+				</div>
+			</div>
 		{/if}
 	{/if}
 </div>
@@ -80,7 +86,7 @@
 		</div>
 	{:else}
 		<div class="flex flex-col">
-			<h2 in:fly={{ y: -50, duration: 500, delay: 750 }} out:fade={{ duration: 500}} class="text-4xl uppercase self-center mb-5">{cityToShow}</h2>
+			<h2 in:fly={{ y: -50, duration: 500, delay: 750 }} out:fade={{ duration: 500}} class="text-4xl px-3 uppercase self-center mb-5">{cityToShow}</h2>
 
 			<div class="flex flex-col lg:flex-row items-center justify-evenly">
 				{#each $weather.daily as day, idx}

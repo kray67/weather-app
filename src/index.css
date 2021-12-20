@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+	.scrollable {
+		overflow: hidden;
+		overflow-y: auto;
+	}
   	.scrollable::-webkit-scrollbar-track {
 		background-color: transparent;
 	}
